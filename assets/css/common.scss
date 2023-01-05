@@ -1,0 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1920px;
+  height: fit-content;
+  background-color: #000;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+}
