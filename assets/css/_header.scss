@@ -1,0 +1,45 @@
+@use 'm-links';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+  margin: 64px auto 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: #fff;
+    @include m-links.a-underline;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 350px;
+    height: fit-content;
+    justify-content: space-between;
+  }
+  &__link {
+    @include m-links.a-underline;
+    @include m-links.a-style;
+  }
+  &__search-btn {
+    border: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+header a {
+  text-decoration: none;
+}
