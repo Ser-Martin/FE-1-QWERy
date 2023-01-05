@@ -1,4 +1,6 @@
 @use 'header';
+@use 'm-links';
+@use 'm-captions';
 
 html {
   scroll-behavior: smooth;
@@ -14,7 +16,7 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
-.greeting-wrapper {
+.greet-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -30,4 +32,72 @@ body {
   -o-background-size: 100%; /* Opera 9.6+ */
   background-repeat: no-repeat;
   align-items: center;
+  &__scroll-btn {
+    border: none;
+    background-color: transparent;
+    margin-top: 126px;
+    @include m-links.a-underline;
+    @include m-links.a-style;
+  }
+}
+.greet {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1370px;
+  margin-top: 200px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 950px;
+    margin-left: auto;
+  }
+  &__caption {
+    @include m-captions.caption-style;
+    @include m-captions.caption-l;
+    margin-bottom: 30px;
+  }
+  &__slogan {
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 100px;
+    text-transform: capitalize;
+    color: #fff;
+    margin: 0;
+    cursor: default;
+    &--thin {
+      font-weight: 400;
+      font-size: 88px;
+      line-height: 100px;
+      text-transform: capitalize;
+      color: #ffffff;
+      margin: 0;
+      cursor: default;
+    }
+  }
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  &__name {
+    display: block;
+    margin: 0;
+    writing-mode: vertical-lr;
+    @include m-links.a-style;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  &__item:nth-child(2) {
+    margin: 20px 0;
+  }
+  &__link {
+    color: #fff;
+  }
 }
