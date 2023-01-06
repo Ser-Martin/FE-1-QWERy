@@ -3,8 +3,11 @@
 @use 'm-captions';
 @use 'std-block';
 
-@mixin orientation($def: row) {
+@mixin orientation($def: row, $shift: 0) {
   flex-direction: $def;
+  &__textbox {
+    margin-left: $shift;
+  }
 }
 
 html {
