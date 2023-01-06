@@ -118,6 +118,9 @@ body {
 .info {
   @include orientation;
 }
+.culture {
+  @include orientation($def: row-reverse, $shift: 42px);
+}
 .footer {
   margin-top: 250px;
   display: flex;
