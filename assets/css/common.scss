@@ -1,6 +1,11 @@
 @use 'header';
 @use 'm-links';
 @use 'm-captions';
+@use 'std-block';
+
+@mixin orientation($def: row) {
+  flex-direction: $def;
+}
 
 html {
   scroll-behavior: smooth;
@@ -100,4 +105,20 @@ body {
   &__link {
     color: #fff;
   }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1460px;
+}
+.info {
+  @include orientation;
+}
+.footer {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1460px;
 }

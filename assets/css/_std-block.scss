@@ -1,0 +1,50 @@
+@use 'm-captions';
+@use 'm-links';
+
+.info,
+.culture {
+  display: flex;
+  width: 100%;
+  max-width: 1460px;
+  justify-content: space-between;
+  align-items: center;
+  &__img {
+    width: 100%;
+    max-width: 598px;
+    height: auto;
+  }
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 632px;
+  }
+  &__caption {
+    @include m-captions.caption-style;
+    @include m-captions.caption-l;
+  }
+  &__heading {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 87px;
+    color: #fff;
+    cursor: default;
+    margin: 27px 0;
+    width: 100%;
+    max-width: 555px;
+  }
+  &__text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #fff;
+    margin: 0;
+    width: 100%;
+    max-width: 632px;
+  }
+  &__link-btn {
+    @include m-links.a-underline;
+    @include m-links.a-btn-style;
+    margin-top: 27px;
+  }
+}

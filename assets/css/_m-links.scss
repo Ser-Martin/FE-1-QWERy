@@ -31,3 +31,11 @@
   line-height: 25px;
   color: #fff;
 }
+
+@mixin a-btn-style {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffd1a0;
+  width: fit-content;
+}
